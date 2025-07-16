@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chamindu Gayanuka - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#home">⌁Chamindu Gayanuka⌁</a>
+        </div>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <img src="assets/profile-pic.png" alt="Profile Image" class="profile-img">
+            <h3>Hello! I Am <span class="highlight">Chamindu Gayanuka</span></h3>
+            <p class="tagline"><span class="cover-highlight">🚀 A Designer | Developer | Problem Solver</span></p>
+            <p class="subtext">I'm passionate about building efficient and scalable applications.</p>
+            <h1>I'm a <span class="typing"></span></h1>
+            <p class="desc">
+                Undergraduate Software Engineer at <span class="company">The Open University of Sri Lanka</span>.<br>
+                Dedicated to crafting innovative solutions and pushing technological boundaries.<br>
+                Let's build something extraordinary together!
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section scroll-hidden">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="about-info">
+                <img src="assets/profile-pic.png" alt="Profile Image">
+                <p>I'm a driven undergraduate software engineer at the <span class="highlight">Open University of Sri
+                        Lanka</span>.</p>
+                <ul class="personal-details">
+                    <li><strong>Birthday:</strong> 14 June 2002</li>
+                    <li><strong>Phone:</strong> +94 76 29 4551</li>
+                    <li><strong>City:</strong> Ampara</li>
+                    <li><strong>Age:</strong> 23</li>
+                    <li><strong>Degree:</strong> BSE</li>
+                </ul>
+            </div>
+
+            <div class="about-description">
+                <p class="about-text">
+                    Hi! I'm <span class="highlight">Chamindu Gayanuka</span>, a passionate software engineer, designer,
+                    and developer from Sri Lanka. <br> <br>
+                    I love crafting interactive applications that solve real-world problems while maintaining great user
+                    experiences. <br> <br>
+                    With over <span class="highlight">3 years of experience</span> in development and UI/UX design, I
+                    specialize in creating responsive, accessible, and efficient products. <br> <br>
+                    My interests include mobile development, automation, and building Telegram bots for fun and
+                    productivity. <br> <br>
+                    I'm currently open to freelance projects, collaborations, and learning new technologies to keep
+                    pushing my limits.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Section -->
+    <section id="project" class="project-section scroll-hidden">
+        <h2>My Projects</h2>
+
+        <div class="project-container">
+            <div class="project-card">
+                <h3>Simple Calculator (React Native)</h3>
+                <p>A clean and minimal calculator built with React Native. Supports addition, subtraction,
+                    multiplication, and division on Android & iOS.</p>
+                <a href="https://github.com/Chamindu-Gayanuka/Simple-Calculator" target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Telethon String Session Generator</h3>
+                <p>A secure Python script to generate Telegram String Sessions using the Telethon Library.</p>
+                <a href="https://github.com/Chamindu-Gayanuka/Telethon-String-Session-Generator" target="_blank">View on
+                    GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Pyrogram String Session Generator</h3>
+                <p>A simple Python script to generate Telegram String Sessions using the Pyrogram Library securely.</p>
+                <a href="https://github.com/Chamindu-Gayanuka/Pyrogram-String-Session-Generator" target="_blank">View on
+                    GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Digital Rename Bot</h3>
+                <p>A Telegram bot that renames files with custom names while preserving metadata. Supports multiple
+                    formats.</p>
+                <a href="https://github.com/Chamindu-Gayanuka/Digital-Rename-Bot" target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Screenshot Bot</h3>
+                <p>A powerful Telegram bot that extracts evenly spaced screenshots from videos.</p>
+                <a href="https://github.com/Chamindu-Gayanuka/Screenshot-Bot" target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>UMZ Filter Bot (Ongoing)</h3>
+                <p>A Telegram auto filter bot with ultimate features 🚀. Currently in development.</p>
+                <a href="https://github.com/Chamindu-Gayanuka/UMZ-Filter-Bot" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section scroll-hidden">
+        <h2>Contact Me</h2>
+        <p class="contact-text">
+            I'm always open to collaborations, freelance projects, or just a friendly chat.<br>
+            Drop me a message and I'll get back to you as soon as possible!
+        </p>
+
+        <form class="contact-form">
+            <input type="text" name="name" id="name" placeholder="Your Name" required />
+            <input type="email" name="email" id="email" placeholder="Your Email" required />
+            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btnSubmit">Send Message</button>
+        </form>
+
+        <p id="form-status"></p>
+
+        <!-- Contact Links with Real App Icons -->
+        <div class="contact-links-icons">
+            <a href="mailto:chamindugayanuka2002@gmail.com" target="_blank" class="contact-link email">
+                <i class="fa-solid fa-envelope"></i></a>
+            <a href="https://wa.me/94762944551" target="_blank" class="contact-link whatsapp">
+                <i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/chamindu-gayanuka-244585270/" target="_blank"
+                class="contact-link linkedin">
+                <i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Chamindu-Gayanuka" target="_blank" class="contact-link github">
+                <i class="fa-brands fa-github"></i></a>
+            <a href="https://t.me/GwitcherG" target="_blank" class="contact-link telegram">
+                <i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Go to top">⬆️</button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 <a href="https://github.com/Chamindu-Gayanuka" target="_blank" class="footer-name">Chamindu
+                Gayanuka</a>. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
