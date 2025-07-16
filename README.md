@@ -73,8 +73,7 @@ Open index.html in your browser. No server needed.
 
 ## 📄 License
 
-This project is open-source and free to use.
-Feel free to modify it for personal or commercial projects.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/Chamindu-Gayanuka/chamindugayanuka.github.io/blob/main/LICENSE) file for details.
 
 ## 🙌 Acknowledgments
 
