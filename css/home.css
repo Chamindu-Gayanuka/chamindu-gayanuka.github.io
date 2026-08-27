@@ -105,6 +105,7 @@
 }
 
 .hero-roles .typing {
+    padding: 2px 6px;
     background: var(--grad-text);
     -webkit-background-clip: text;
     background-clip: text;
