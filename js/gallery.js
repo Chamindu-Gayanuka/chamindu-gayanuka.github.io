@@ -1,5 +1,5 @@
 /* ==========================================================================
-   gallery.js - Masonry gallery rendering, filters, lightbox
+   gallery.js - Masonry gallery rendering, filters, pagination, lightbox
    Real achievements, certificates and event visuals + design/dev showcase.
    ========================================================================== */
 
@@ -289,27 +289,95 @@ const GALLERY_ITEMS = [
 
     masonry.innerHTML = GALLERY_ITEMS.map(itemHTML).join("");
 
-    /* ---------- Filters ---------- */
+    /* ---------- Filters + Pagination (same page) ---------- */
+    const PER_PAGE = 9; // gallery tiles shown per page
     const filterBar = document.getElementById("gallery-filters");
     const items = Array.from(masonry.querySelectorAll(".gallery-item"));
+
+    // Inject pagination container right after the masonry grid
+    const pager = document.createElement("nav");
+    pager.className = "gallery-pagination";
+    pager.id = "gallery-pagination";
+    pager.setAttribute("aria-label", "Gallery pagination");
+    masonry.insertAdjacentElement("afterend", pager);
+
+    let currentFilter = "all";
+    let currentPage = 1;
+
+    function getMatched() {
+        return items.filter(
+            (it) => currentFilter === "all" || it.getAttribute("data-category") === currentFilter
+        );
+    }
+
+    function renderPager(totalPages) {
+        if (totalPages <= 1) {
+            pager.innerHTML = "";
+            return;
+        }
+        let html = `<button class="page-btn nav" data-page="prev" ${
+            currentPage === 1 ? "disabled" : ""
+        } aria-label="Previous page"><i class="fa-solid fa-chevron-left"></i></button>`;
+        for (let i = 1; i <= totalPages; i++) {
+            html += `<button class="page-btn num ${i === currentPage ? "active" : ""}" data-page="${i}" aria-label="Page ${i}"${
+                i === currentPage ? ' aria-current="page"' : ""
+            }>${i}</button>`;
+        }
+        html += `<button class="page-btn nav" data-page="next" ${
+            currentPage === totalPages ? "disabled" : ""
+        } aria-label="Next page"><i class="fa-solid fa-chevron-right"></i></button>`;
+        pager.innerHTML = html;
+    }
+
+    function renderGallery() {
+        const matched = getMatched();
+        const totalPages = Math.max(1, Math.ceil(matched.length / PER_PAGE));
+        if (currentPage > totalPages) currentPage = totalPages;
+        const start = (currentPage - 1) * PER_PAGE;
+        const end = start + PER_PAGE;
+
+        // Hide everything, then reveal only the current page slice of matched items
+        items.forEach((it) => it.classList.add("hide"));
+        matched.slice(start, end).forEach((it) => {
+            it.classList.remove("hide");
+            it.classList.add("in"); // ensure paginated-in tiles are visible (scroll-reveal)
+        });
+
+        renderPager(totalPages);
+    }
 
     if (filterBar) {
         filterBar.addEventListener("click", (e) => {
             const btn = e.target.closest(".filter-btn");
             if (!btn) return;
-            const filter = btn.getAttribute("data-filter");
             filterBar.querySelectorAll(".filter-btn").forEach((b) => {
                 b.classList.remove("active");
                 b.setAttribute("aria-pressed", "false");
             });
             btn.classList.add("active");
             btn.setAttribute("aria-pressed", "true");
-            items.forEach((it) => {
-                const match = filter === "all" || it.getAttribute("data-category") === filter;
-                it.classList.toggle("hide", !match);
-            });
+            currentFilter = btn.getAttribute("data-filter");
+            currentPage = 1; // reset to first page on filter change
+            renderGallery();
         });
     }
+
+    pager.addEventListener("click", (e) => {
+        const btn = e.target.closest(".page-btn");
+        if (!btn || btn.disabled) return;
+        const p = btn.getAttribute("data-page");
+        const totalPages = Math.max(1, Math.ceil(getMatched().length / PER_PAGE));
+        if (p === "prev") currentPage = Math.max(1, currentPage - 1);
+        else if (p === "next") currentPage = Math.min(totalPages, currentPage + 1);
+        else currentPage = parseInt(p, 10);
+        renderGallery();
+        // keep the gallery header in view when paging
+        const sec = document.getElementById("gallery");
+        if (sec) sec.scrollIntoView({behavior: "smooth", block: "start"});
+    });
+
+    // Initial paginated render
+    renderGallery();
 
     /* ---------- Lightbox ---------- */
     const lb = document.getElementById("lightbox");

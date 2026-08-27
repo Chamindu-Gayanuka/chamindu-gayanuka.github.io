@@ -1,5 +1,5 @@
 /* ==========================================================================
-   gallery.css — Masonry gallery + lightbox
+   gallery.css — Masonry gallery + pagination + lightbox
    ========================================================================== */
 
 .gallery-filters {
@@ -147,6 +147,61 @@
 
 .gallery-ph .ph-note {
     font-size: 0.78rem;
+}
+
+/* ---------- Gallery pagination ---------- */
+.gallery-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 36px;
+}
+
+.gallery-pagination:empty {
+    display: none;
+}
+
+.page-btn {
+    min-width: 42px;
+    height: 42px;
+    padding: 0 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--r-full);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 0.92rem;
+    font-weight: 600;
+    font-family: var(--font);
+    cursor: pointer;
+    transition: all 0.3s var(--ease);
+}
+
+.page-btn:hover:not(:disabled):not(.active) {
+    color: var(--text);
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+}
+
+.page-btn.active {
+    color: #fff;
+    background: var(--grad-primary);
+    border-color: transparent;
+    box-shadow: 0 6px 22px rgba(139, 92, 246, 0.35);
+}
+
+.page-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.page-btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 /* ---------- Lightbox ---------- */

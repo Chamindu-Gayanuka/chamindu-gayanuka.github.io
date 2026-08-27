@@ -1,29 +1,26 @@
-# Chamindu Gayanuka - Personal Portfolio
+# Chamindu Gayanuka - Premium Developer Portfolio
 
-A modern, responsive personal portfolio website built with **HTML, CSS, and JavaScript**.
-
-This site highlights my skills as a **Software Engineer, UI/UX Designer, and Developer**.  
-I showcase my projects, share my background, and provide easy ways to get in touch.
+A modern, premium **dark-aesthetic** personal portfolio for a **Software Engineer · Developer · UI/UX Designer**, built
+with **HTML5, CSS3 and Vanilla JavaScript** - no frameworks, no build tools, no backend.
 
 ## 🚀 Features
 
-- **Responsive Design** – Mobile & Desktop friendly  
-- **Animated Scroll Effects**  
-- **Interactive Social Links**  
-- **Dark Modern Aesthetic**  
-- **Smooth Navigation & Sticky Navbar**  
+- **Responsive Design** – Mobile & Desktop friendly
+- **Animated Scroll Effects**
+- **Interactive Social Links**
+- **Dark Modern Aesthetic**
+- **Smooth Navigation & Sticky Navbar**
 - **Contact Form with Visual Feedback**
 
 ## 👨‍💻 About Me
 
 Hi! I'm **Chamindu Gayanuka**, a software engineer from Sri Lanka with a passion for:
 
-- Mobile App Development  
-- UI/UX Design  
-- Automation & Telegram Bots  
+- Mobile App Development
+- UI/UX Design
+- Automation & Telegram Bots
 
 I have **3+ years of experience** building interactive, real-world applications.
-
 
 ## 📂 Project Structure
 
@@ -36,22 +33,19 @@ portfolio/
 └── README.md         # Project documentation
 ```
 
-
 ## 💻 Technologies Used
 
-- **HTML5 & CSS3**  
-- **Flexbox & Grid Layouts**  
-- **Responsive Media Queries**  
-- **JavaScript**  
+- **HTML5 & CSS3**
+- **Flexbox & Grid Layouts**
+- **Responsive Media Queries**
+- **JavaScript**
 - **Font Awesome / Icons**
-
 
 ## 📱 Social & Contact
 
-- [**Telegram**](https://t.me/GwitcherG)  
-- [**LinkedIn**](https://www.linkedin.com/in/chamindu-gayanuka-244585270/)  
+- [**Telegram**](https://t.me/GwitcherG)
+- [**LinkedIn**](https://www.linkedin.com/in/chamindu-gayanuka-244585270/)
 - [**GitHub**](https://github.com/Chamindu-Gayanuka)
-
 
 ## 🔧 How to Use
 
@@ -73,7 +67,8 @@ Open index.html in your browser. No server needed.
 
 ## 📄 License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/Chamindu-Gayanuka/chamindugayanuka.github.io/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License. See
+the [LICENSE](https://github.com/Chamindu-Gayanuka/chamindugayanuka.github.io/blob/main/LICENSE) file for details.
 
 ## 🙌 Acknowledgments
 
