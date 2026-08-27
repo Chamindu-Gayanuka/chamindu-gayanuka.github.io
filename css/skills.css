@@ -1,0 +1,106 @@
+/* ==========================================================================
+   skills.css — Skills section
+   ========================================================================== */
+
+.skills-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.skill-group {
+    padding: 26px 24px;
+    border-radius: var(--r-lg);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: transform 0.4s var(--ease), border-color 0.4s var(--ease),
+    box-shadow 0.4s var(--ease);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-group::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--grad-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s var(--ease);
+}
+
+.skill-group:hover {
+    transform: translateY(-6px);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-md), var(--glow-soft);
+}
+
+.skill-group:hover::before {
+    transform: scaleX(1);
+}
+
+.skill-group-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.skill-group-head .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    background: var(--grad-soft);
+    border: 1px solid var(--border);
+    color: var(--accent);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.skill-group-head h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.skill-group-head span {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border-radius: var(--r-full);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--hairline);
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--text);
+    transition: all 0.3s var(--ease);
+    cursor: default;
+}
+
+.skill-tag i {
+    font-size: 0.95rem;
+    color: var(--accent);
+}
+
+.skill-tag:hover {
+    background: var(--grad-soft);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    color: #fff;
+}

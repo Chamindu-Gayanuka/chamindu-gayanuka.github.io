@@ -1,0 +1,228 @@
+/* ==========================================================================
+   responsive.css — Breakpoints & reduced-motion
+   Loaded LAST so it overrides section styles.
+   ========================================================================== */
+
+/* ---------- Large tablet / small laptop ---------- */
+@media (max-width: 1024px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: center;
+    }
+
+    .hero-status,
+    .hero-actions,
+    .hero-socials,
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-desc {
+        margin-inline: auto;
+    }
+
+    .hero-roles {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        order: -1;
+    }
+
+    .hero-codecard {
+        display: none;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card {
+        position: static;
+        max-width: 460px;
+        margin-inline: auto;
+        width: 100%;
+    }
+
+    .contact-wrap {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 860px) {
+    .nav-links,
+    .nav-cta {
+        position: fixed;
+        top: var(--nav-h);
+        right: 0;
+        height: calc(100vh - var(--nav-h));
+        width: min(300px, 82vw);
+        background: rgba(10, 8, 17, 0.96);
+        backdrop-filter: blur(18px);
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 6px;
+        padding: 28px 24px;
+        border-left: 1px solid var(--hairline);
+        transform: translateX(105%);
+        transition: transform 0.4s var(--ease);
+        z-index: 999;
+    }
+
+    .nav-cta {
+        top: auto;
+        bottom: 40px;
+        height: auto;
+        width: min(300px, 82vw);
+        background: transparent;
+        backdrop-filter: none;
+        border-left: none;
+        padding: 0 24px;
+        transform: translateX(105%);
+    }
+
+    .nav-links.open,
+    .nav-cta.open {
+        transform: translateX(0);
+    }
+
+    .nav-links a {
+        font-size: 1.05rem;
+        padding: 14px 16px;
+        border-radius: 12px;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .nav-links a.active {
+        background: var(--grad-soft);
+    }
+
+    .nav-cta .btn {
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+    .section {
+        padding-block: 64px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-chip.c1 {
+        left: 4px;
+    }
+
+    .hero-chip.c2 {
+        right: 4px;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .footer-nav {
+        gap: 28px;
+    }
+
+    .modal-content {
+        padding-inline: 20px;
+    }
+
+    .contact-cta,
+    .contact-form-panel {
+        padding: 24px 20px;
+    }
+}
+
+/* ---------- Small mobile (375px & below) ---------- */
+@media (max-width: 400px) {
+    :root {
+        --gutter: 18px;
+    }
+
+    .hero-title {
+        font-size: 2.3rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-stats {
+        gap: 18px;
+    }
+
+    .hero-stat .num {
+        font-size: 1.4rem;
+    }
+
+    .project-filters,
+    .gallery-filters {
+        gap: 7px;
+    }
+
+    .filter-btn {
+        padding: 8px 13px;
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .about-details li {
+        font-size: 0.86rem;
+    }
+
+    .hero-portrait {
+        width: min(300px, 80vw);
+    }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .hero-ring,
+    .hero-chip,
+    .hero-codecard,
+    .hero-scroll .mouse::before,
+    .hero-status .dot,
+    .tl-item.current .tl-dot,
+    .footer {
+        animation: none !important;
+    }
+
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

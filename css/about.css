@@ -1,0 +1,178 @@
+/* ==========================================================================
+   about.css — About section
+   ========================================================================== */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(28px, 5vw, 56px);
+    align-items: start;
+}
+
+/* Left: profile card + details */
+.about-card {
+    padding: 26px;
+    position: sticky;
+    top: calc(var(--nav-h) + 24px);
+}
+
+.about-card-photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--r-md);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    margin-bottom: 22px;
+}
+
+.about-card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-details {
+    display: grid;
+    gap: 2px;
+}
+
+.about-details li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 4px;
+    border-bottom: 1px solid var(--hairline);
+    font-size: 0.94rem;
+}
+
+.about-details li:last-child {
+    border-bottom: none;
+}
+
+.about-details .k {
+    color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.about-details .k i {
+    color: var(--accent);
+    width: 16px;
+    text-align: center;
+}
+
+.about-details .v {
+    color: var(--text);
+    font-weight: 600;
+    text-align: right;
+}
+
+/* Right: narrative */
+.about-lead {
+    font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+    line-height: 1.5;
+    font-weight: 600;
+    margin-bottom: 22px;
+    letter-spacing: -0.01em;
+}
+
+.about-text p {
+    color: var(--muted);
+    margin-bottom: 16px;
+    font-size: 1.02rem;
+}
+
+.about-text .highlight {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Info blocks: education / philosophy / goals */
+.about-blocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.about-block {
+    padding: 22px 20px;
+    border-radius: var(--r-md);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: transform 0.35s var(--ease), border-color 0.35s var(--ease),
+    box-shadow 0.35s var(--ease);
+}
+
+.about-block:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-strong);
+    box-shadow: var(--glow-soft);
+}
+
+.about-block .icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: var(--grad-soft);
+    border: 1px solid var(--border);
+    color: var(--accent);
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+}
+
+.about-block h4 {
+    font-size: 1.05rem;
+    margin-bottom: 7px;
+}
+
+.about-block p {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+/* Interests chips */
+.about-interests {
+    margin-top: 30px;
+}
+
+.about-interests h4 {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 14px;
+}
+
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-radius: var(--r-full);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    font-size: 0.88rem;
+    color: var(--text);
+    transition: all 0.3s var(--ease);
+}
+
+.chip i {
+    color: var(--accent);
+}
+
+.chip:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: var(--glow-soft);
+}
