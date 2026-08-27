@@ -34,7 +34,6 @@
         display: none;
     }
 
-    /* Hide scroll hint on narrower screens to avoid overlapping stats */
     .hero-scroll {
         display: none;
     }

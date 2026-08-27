@@ -58,6 +58,7 @@
     <link rel="stylesheet" href="css/projects.css"/>
     <link rel="stylesheet" href="css/experience.css"/>
     <link rel="stylesheet" href="css/gallery.css"/>
+    <link rel="stylesheet" href="css/certifications.css"/>
     <link rel="stylesheet" href="css/contact.css"/>
     <link rel="stylesheet" href="css/responsive.css"/>
 
@@ -118,6 +119,7 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Journey</a></li>
             <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#certifications">Certs</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
 
@@ -187,7 +189,7 @@
                         <div class="lbl">Years Experience</div>
                     </div>
                     <div class="hero-stat">
-                        <div class="num">8+</div>
+                        <div class="num">15+</div>
                         <div class="lbl">Projects Built</div>
                     </div>
                     <div class="hero-stat">
@@ -399,13 +401,17 @@
                 <h2 class="section-title reveal d1">Projects that <span class="gradient-text">ship &amp; solve</span>
                 </h2>
                 <p class="section-subtitle reveal d2">
-                    A selection of apps, tools and bots I've designed and built. Explore the case studies.
+                    Full-stack apps, Python tools and Telegram bots I've built — plus UI/UX design case
+                    studies. Explore the details.
                 </p>
             </div>
 
             <div class="project-filters reveal d2" id="project-filters" role="group" aria-label="Filter projects">
                 <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
-                <button class="filter-btn" data-filter="mobile" aria-pressed="false">Web / Mobile</button>
+                <button class="filter-btn" data-filter="uiux" aria-pressed="false">UI/UX</button>
+                <button class="filter-btn" data-filter="fullstack" aria-pressed="false">Full-Stack</button>
+                <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+                <button class="filter-btn" data-filter="mobile" aria-pressed="false">Mobile</button>
                 <button class="filter-btn" data-filter="python" aria-pressed="false">Python</button>
                 <button class="filter-btn" data-filter="automation" aria-pressed="false">Automation</button>
                 <button class="filter-btn" data-filter="telegram" aria-pressed="false">Telegram</button>
@@ -489,20 +495,103 @@
                 <span class="eyebrow reveal">Visual Showcase</span>
                 <h2 class="section-title reveal d1">A <span class="gradient-text">designer's gallery</span></h2>
                 <p class="section-subtitle reveal d2">
-                    Project visuals, UI/UX explorations and development concepts. Click any tile to view fullscreen.
+                    Achievements, certificates, events, UI/UX designs and development visuals — a snapshot of
+                    the journey. Click any tile to view fullscreen.
                 </p>
             </div>
 
             <div class="gallery-filters reveal d2" id="gallery-filters" role="group" aria-label="Filter gallery">
                 <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
-                <button class="filter-btn" data-filter="screenshots" aria-pressed="false">Screenshots</button>
-                <button class="filter-btn" data-filter="uiux" aria-pressed="false">UI/UX</button>
-                <button class="filter-btn" data-filter="dev" aria-pressed="false">Development</button>
+                <button class="filter-btn" data-filter="achievements" aria-pressed="false">Achievements</button>
                 <button class="filter-btn" data-filter="certificates" aria-pressed="false">Certificates</button>
                 <button class="filter-btn" data-filter="events" aria-pressed="false">Events</button>
+                <button class="filter-btn" data-filter="uiux" aria-pressed="false">UI/UX</button>
+                <button class="filter-btn" data-filter="screenshots" aria-pressed="false">Screenshots</button>
+                <button class="filter-btn" data-filter="dev" aria-pressed="false">Development</button>
             </div>
 
             <div class="gallery-masonry" id="gallery-masonry"><!-- rendered by gallery.js --></div>
+        </div>
+    </section>
+
+    <!-- ============================ CERTIFICATIONS ============================ -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow reveal">Certifications &amp; Learning</span>
+                <h2 class="section-title reveal d1">Continuous <span class="gradient-text">learning &amp; growth</span>
+                </h2>
+                <p class="section-subtitle reveal d2">
+                    Courses, bootcamps and programmes I've completed across development, foundations and
+                    professional skills.
+                </p>
+            </div>
+
+            <div class="cert-groups">
+                <div class="cert-group reveal">
+                    <div class="cert-group-head">
+                        <span class="icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                        <div><h3>Udemy</h3><span>Online Courses</span></div>
+                    </div>
+                    <ul class="cert-list">
+                        <li><i class="fa-solid fa-circle"></i> JavaScript Concepts</li>
+                        <li><i class="fa-solid fa-circle"></i> SQL Programming</li>
+                        <li><i class="fa-solid fa-circle"></i> Python Crash Course</li>
+                        <li><i class="fa-solid fa-circle"></i> Web Development (HTML/CSS)</li>
+                        <li><i class="fa-solid fa-circle"></i> R Programming Bootcamp</li>
+                    </ul>
+                </div>
+
+                <div class="cert-group reveal d1">
+                    <div class="cert-group-head">
+                        <span class="icon"><i class="fa-solid fa-code"></i></span>
+                        <div><h3>SoloLearn</h3><span>Programming Foundations</span></div>
+                    </div>
+                    <ul class="cert-list">
+                        <li><i class="fa-solid fa-circle"></i> Introduction to C</li>
+                        <li><i class="fa-solid fa-circle"></i> Introduction to Java</li>
+                        <li><i class="fa-solid fa-circle"></i> Introduction to Python</li>
+                        <li><i class="fa-solid fa-circle"></i> Introduction to SQL</li>
+                    </ul>
+                </div>
+
+                <div class="cert-group reveal d2">
+                    <div class="cert-group-head">
+                        <span class="icon"><i class="fa-solid fa-calculator"></i></span>
+                        <div><h3>AAT Sri Lanka</h3><span>Levels 1 &amp; 2</span></div>
+                    </div>
+                    <ul class="cert-list">
+                        <li><i class="fa-solid fa-circle"></i> Accounting Principles</li>
+                        <li><i class="fa-solid fa-circle"></i> Financial Reporting</li>
+                    </ul>
+                </div>
+
+                <div class="cert-group reveal d1">
+                    <div class="cert-group-head">
+                        <span class="icon"><i class="fa-solid fa-pen-fancy"></i></span>
+                        <div><h3>IELDI</h3><span>6-Month Course</span></div>
+                    </div>
+                    <ul class="cert-list">
+                        <li><i class="fa-solid fa-circle"></i> Academic Writing &amp; Communication</li>
+                    </ul>
+                </div>
+
+                <div class="cert-group reveal d2">
+                    <div class="cert-group-head">
+                        <span class="icon"><i class="fa-solid fa-desktop"></i></span>
+                        <div><h3>Nenasala Sri Lanka</h3><span>KID1 &amp; KID2</span></div>
+                    </div>
+                    <ul class="cert-list">
+                        <li><i class="fa-solid fa-circle"></i> Microsoft Office Suite</li>
+                        <li><i class="fa-solid fa-circle"></i> Digital Literacy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="cert-note-line reveal">
+                Development bootcamp certificates are viewable in the
+                <a href="#gallery">Gallery</a> above.
+            </p>
         </div>
     </section>
 
@@ -606,6 +695,7 @@
                     <h4>More</h4>
                     <a href="#experience">Journey</a>
                     <a href="#gallery">Gallery</a>
+                    <a href="#certifications">Certifications</a>
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-col">

@@ -105,10 +105,10 @@
 }
 
 .hero-roles .typing {
-    padding: 2px 6px;
     background: var(--grad-text);
     -webkit-background-clip: text;
     background-clip: text;
+    padding: 2px 6px;
     -webkit-text-fill-color: transparent;
 }
 
@@ -307,7 +307,7 @@
 /* Code card floating decoration */
 .hero-codecard {
     position: absolute;
-    top: -30px;
+    top: -100px;
     right: -18px;
     width: 210px;
     padding: 14px;
