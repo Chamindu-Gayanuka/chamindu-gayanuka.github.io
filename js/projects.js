@@ -1,5 +1,5 @@
 /* ==========================================================================
-   projects.js — Project data (source of truth), rendering, filtering, modal
+   projects.js - Project data (source of truth), rendering, filtering, modal
    Two project types:
      - type "dev"  : software / full-stack projects (GitHub + optional demo)
      - type "uiux" : UI/UX design case studies (Figma prototype + case study)
@@ -44,7 +44,7 @@ const PROJECTS = [
             "A lightweight web tool that helps Open University of Sri Lanka BSE students calculate and track their course credits. Built with pure HTML, CSS and JavaScript for a fast, install-free experience in the browser.",
         highlights: [
             "Credit calculation for the BSE programme",
-            "Runs entirely in the browser — no install",
+            "Runs entirely in the browser - no install",
             "Clean, responsive interface",
         ],
         tech: ["HTML", "CSS", "JavaScript"],
@@ -62,7 +62,7 @@ const PROJECTS = [
         short:
             "A full-stack credit bookkeeping app built on the MERN stack for tracking shop credit records.",
         description:
-            "A full-stack MERN application for managing shop credit books — recording customer credit, payments and outstanding balances. Built with MongoDB, Express.js, React and Node.js for a complete client-to-server workflow.",
+            "A full-stack MERN application for managing shop credit books - recording customer credit, payments and outstanding balances. Built with MongoDB, Express.js, React and Node.js for a complete client-to-server workflow.",
         highlights: [
             "Complete MERN full-stack architecture",
             "Track customer credit, payments & balances",
@@ -125,7 +125,7 @@ const PROJECTS = [
         short:
             "A Python Tkinter GUI for unlocking PowerPoint files by modifying and removing passwords.",
         description:
-            "A desktop GUI application built in Python and Tkinter that unlocks protected PowerPoint files by modifying and removing their passwords — turning a tedious manual task into a one-click automated workflow.",
+            "A desktop GUI application built in Python and Tkinter that unlocks protected PowerPoint files by modifying and removing their passwords - turning a tedious manual task into a one-click automated workflow.",
         highlights: [
             "One-click PowerPoint password removal",
             "Friendly Python Tkinter desktop GUI",
@@ -209,7 +209,7 @@ const PROJECTS = [
         short:
             "A simple Python script to securely generate Telegram String Sessions using the Pyrogram library.",
         description:
-            "A lightweight Python tool that securely generates Telegram String Sessions with the Pyrogram framework — ideal for spinning up authenticated Telegram clients and bots quickly and safely.",
+            "A lightweight Python tool that securely generates Telegram String Sessions with the Pyrogram framework - ideal for spinning up authenticated Telegram clients and bots quickly and safely.",
         highlights: [
             "Fast, secure session-string generation",
             "Powered by the Pyrogram framework",
@@ -244,7 +244,7 @@ const PROJECTS = [
             ia:
                 "Structured the content into clear learning paths, lessons and practice modules so learners always know what comes next.",
             wireframes:
-                "Low-fidelity wireframes established the core screens — home, lesson, practice and progress — before visual styling.",
+                "Low-fidelity wireframes established the core screens - home, lesson, practice and progress - before visual styling.",
             prototyping:
                 "Built an interactive Figma prototype to validate navigation and lesson flow end to end.",
             usability:
@@ -274,7 +274,7 @@ const PROJECTS = [
             journey:
                 "Mapped journeys for managing students, recording attendance and reviewing academic performance.",
             ia:
-                "Organised the system into logical modules — students, attendance, results and reports — for fast access.",
+                "Organised the system into logical modules - students, attendance, results and reports - for fast access.",
             wireframes:
                 "Wireframed the dashboard and record views to prioritise the most frequent actions.",
             prototyping:
