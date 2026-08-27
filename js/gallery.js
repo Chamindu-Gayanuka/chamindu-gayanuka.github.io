@@ -1,5 +1,5 @@
 /* ==========================================================================
-   gallery.js — Masonry gallery rendering, filters, lightbox
+   gallery.js - Masonry gallery rendering, filters, lightbox
    Real achievements, certificates and event visuals + design/dev showcase.
    ========================================================================== */
 
@@ -9,13 +9,13 @@ const GALLERY_ITEMS = [
         src: "assets/certificates/achievement-codesignal-cs-fundamentals.png",
         category: "achievements",
         categoryLabel: "Achievement",
-        title: "CodeSignal — Computer Science Fundamentals",
+        title: "CodeSignal - Computer Science Fundamentals",
     },
     {
-        src: "assets/certificates/achievement-devtown-community.jpg",
+        src: "assets/certificates/achievement-php-programming-for-beginners.png",
         category: "achievements",
         categoryLabel: "Achievement",
-        title: "DevTown — Certificate of Appreciation (Community)",
+        title: "CodeSignal - PHP Programming for Beginners",
     },
 
     /* ------------------------- Certificates ------------------------- */
@@ -23,49 +23,145 @@ const GALLERY_ITEMS = [
         src: "assets/certificates/certificate-frontend-aws.jpg",
         category: "certificates",
         categoryLabel: "Certificate",
-        title: "Front-End Web Development (React & JavaScript) — AWS Community Builders",
+        title: "Front-End Web Development (React & JavaScript) - AWS Community Builders",
     },
     {
         src: "assets/certificates/certificate-frontend-gdsc.jpg",
         category: "certificates",
         categoryLabel: "Certificate",
-        title: "Front-End Web Development (React & JavaScript) — Google Developer Student Clubs",
+        title: "Front-End Web Development (React & JavaScript) - Google Developer Student Clubs",
     },
     {
         src: "assets/certificates/certificate-frontend-microsoft.jpg",
         category: "certificates",
         categoryLabel: "Certificate",
-        title: "Front-End Web Development (React & JavaScript) — Microsoft Learn Student Ambassadors",
+        title: "Front-End Web Development (React & JavaScript) - Microsoft Learn Student Ambassadors",
     },
     {
         src: "assets/certificates/certificate-frontend-devtown.jpg",
         category: "certificates",
         categoryLabel: "Certificate",
-        title: "Front-End Web Development (React & JavaScript) — DevTown Bootcamp",
+        title: "Front-End Web Development (React & JavaScript) - DevTown Bootcamp",
     },
     {
         src: "assets/certificates/certificate-backend-aws.jpg",
         category: "certificates",
         categoryLabel: "Certificate",
-        title: "Back-End Web Development (Node.js & Express) — AWS Community Builders",
+        title: "Back-End Web Development (Node.js & Express) - AWS Community Builders",
     },
     {
         src: "assets/certificates/certificate-backend-gdsc.jpg",
         category: "certificates",
         categoryLabel: "Certificate",
-        title: "Back-End Web Development (Node.js & Express) — Google Developer Student Clubs",
+        title: "Back-End Web Development (Node.js & Express) - Google Developer Student Clubs",
     },
     {
         src: "assets/certificates/certificate-backend-microsoft.jpg",
         category: "certificates",
         categoryLabel: "Certificate",
-        title: "Back-End Web Development (Node.js & Express) — Microsoft Learn Student Ambassadors",
+        title: "Back-End Web Development (Node.js & Express) - Microsoft Learn Student Ambassadors",
     },
     {
         src: "assets/certificates/certificate-backend-devtown.jpg",
         category: "certificates",
         categoryLabel: "Certificate",
-        title: "Back-End Web Development (Node.js & Express) — DevTown Bootcamp",
+        title: "Back-End Web Development (Node.js & Express) - DevTown Bootcamp",
+    },
+    {
+        src: "assets/certificates/certificate-devtown-community.jpg",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "DevTown - Certificate of Appreciation (Community)",
+    },
+    {
+        src: "assets/certificates/certificate-php-basics.png",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Introduction to PHP Basics - CodeSignal",
+    },
+    {
+        src: "assets/certificates/certificate-php-conditionals.png",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Navigating Decisions with PHP Conditionals - CodeSignal",
+    },
+    {
+        src: "assets/certificates/certificate-php-loops.png",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Iterating with Loops in PHP - CodeSignal",
+    },
+    {
+        src: "assets/certificates/certificate-php-functions.png",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Efficient Programming with PHP Functions - CodeSignal",
+    },
+    {
+        src: "assets/certificates/certificate-udemy-build-your-personal-website-using-chatgpt.png",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Build Your Personal Website Using ChatGPT - Udemy",
+    },
+    {
+        src: "assets/certificates/certificate-udemy-windows-command-line-basics.png",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Windows Command Line Basics - Udemy",
+    },
+    {
+        src: "assets/certificates/certificate-udemy-2024-r-programming-bootcamp-for-absolute-beginners.png",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "2024 R Programming Bootcamp for Absolute Beginners - Udemy",
+    },
+    {
+        src: "assets/certificates/certificate-udemy-sql-the-complete-introduction-to-sql-programming.png",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "SQL - The Complete Introduction to SQL Programming - Udemy",
+    },
+    {
+        src: "assets/certificates/certificate-udemy-web-development-wizardry-html-css-course-for-beginners.png",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Web Development Wizardry: HTML & CSS Course for Beginners - Udemy",
+    },
+    {
+        src: "assets/certificates/certificate-udemy-javascript-practicals-crash-course.png",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Javascript Practicals Crash Course - Udemy",
+    },
+    {
+        src: "assets/certificates/certificate-udemy-python-crash-course.png",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Python Crash Course - Udemy",
+    },
+    {
+        src: "assets/certificates/certificate-sololearn-introduction-to-java.png",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Introduction to Java - SoloLearn",
+    },
+    {
+        src: "assets/certificates/certificate-sololearn-introduction-to-c.png",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Introduction to C - SoloLearn",
+    },
+    {
+        src: "assets/certificates/certificate-sololearn-introduction-to-python.png",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Introduction to Python - SoloLearn",
+    },
+    {
+        src: "assets/certificates/certificate-sololearn-introduction-to-sql.png",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Introduction to SQL - SoloLearn",
     },
 
     /* ------------------------- Events ------------------------- */
@@ -81,31 +177,31 @@ const GALLERY_ITEMS = [
         src: "assets/projects/uiux-eduway.png",
         category: "uiux",
         categoryLabel: "UI/UX Design",
-        title: "EduWay — English Learning Platform",
+        title: "EduWay - English Learning Platform",
     },
     {
         src: "assets/projects/uiux-edumate.png",
         category: "uiux",
         categoryLabel: "UI/UX Design",
-        title: "EduMate — Student Management System",
+        title: "EduMate - Student Management System",
     },
     {
         src: "assets/projects/uiux-busbuddy.png",
         category: "uiux",
         categoryLabel: "UI/UX Design",
-        title: "BusBuddy — Real-Time Bus Tracking",
+        title: "BusBuddy - Real-Time Bus Tracking",
     },
     {
         src: "assets/projects/uiux-carepill.png",
         category: "uiux",
         categoryLabel: "UI/UX Design",
-        title: "CarePill — Caregiving & Medication Reminder",
+        title: "CarePill - Caregiving & Medication Reminder",
     },
     {
         src: "assets/projects/uiux-adalanka.png",
         category: "uiux",
         categoryLabel: "UI/UX Design",
-        title: "AdaLanka — News Platform",
+        title: "AdaLanka - News Platform",
     },
 
     /* ------------------------- Project Screenshots ------------------------- */
@@ -113,19 +209,31 @@ const GALLERY_ITEMS = [
         src: "assets/projects/calculator.png",
         category: "screenshots",
         categoryLabel: "Project Screenshot",
-        title: "Simple Calculator — Cover",
+        title: "Simple Calculator - Cover",
     },
     {
         src: "assets/projects/subtitle-translator.png",
         category: "screenshots",
         categoryLabel: "Project Screenshot",
-        title: "Subtitle Translator — Cover",
+        title: "Subtitle Translator - Cover",
     },
     {
         src: "assets/projects/ape-kade-credit-book.png",
         category: "screenshots",
         categoryLabel: "Project Screenshot",
-        title: "Ape Kade Credit Book — Cover",
+        title: "Ape Kade Credit Book - Cover",
+    },
+    {
+        src: "assets/projects/ape-kade-credit-book-2.png",
+        category: "screenshots",
+        categoryLabel: "Project Screenshot",
+        title: "Ape Kade Credit Book",
+    },
+    {
+        src: "assets/projects/ape-kade-credit-book-3.png",
+        category: "screenshots",
+        categoryLabel: "Project Screenshot",
+        title: "Ape Kade Credit Book",
     },
 
     /* ------------------------- Development ------------------------- */
@@ -133,25 +241,31 @@ const GALLERY_ITEMS = [
         src: "assets/projects/fifo-page-replacement.png",
         category: "dev",
         categoryLabel: "Development",
-        title: "FIFO Page Replacement Simulator — Concept Art",
+        title: "FIFO Page Replacement Simulator - Concept Art",
+    },
+    {
+        src: "assets/projects/fifo-page-replacement-2.png",
+        category: "dev",
+        categoryLabel: "Development",
+        title: "FIFO Page Replacement Simulator",
     },
     {
         src: "assets/projects/screenshot-bot.png",
         category: "dev",
         categoryLabel: "Development",
-        title: "Telegram Screenshot Bot — Concept Art",
+        title: "Telegram Screenshot Bot - Concept Art",
     },
     {
         src: "assets/projects/pptx-remover.png",
         category: "dev",
         categoryLabel: "Development",
-        title: "PPTX Remover — Concept Art",
+        title: "PPTX Remover - Concept Art",
     },
     {
         src: "assets/projects/ousl-credit-calculator.png",
         category: "dev",
         categoryLabel: "Development",
-        title: "OUSL BSE Credit Calculator — Concept Art",
+        title: "OUSL BSE Credit Calculator - Concept Art",
     },
 ];
 
