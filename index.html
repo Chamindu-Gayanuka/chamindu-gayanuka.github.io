@@ -2,223 +2,677 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#08060D"/>
+
+    <!-- Primary SEO -->
+    <title>Chamindu Gayanuka | Software Engineer · Developer · UI/UX Designer</title>
     <meta name="description"
-        content="Chamindu Gayanuka | Undergraduate Software Engineer at The Open University of Sri Lanka | Specializing in UI/UX Design, Telegram Bots, and Mobile App Development.">
+          content="Chamindu Gayanuka — Software Engineer, Developer & UI/UX Designer. Undergraduate Software Engineer at The Open University of Sri Lanka specializing in mobile apps, Python automation, Telegram bots and clean UI/UX design."/>
     <meta name="keywords"
-        content="Chamindu Gayanuka, Software Engineer, Developer, Portfolio, Telegram Bots, React Native, Python, GitHub">
-    <meta name="author" content="Chamindu Gayanuka">
-    <meta property="og:title" content="Chamindu Gayanuka - Software Engineer Portfolio">
+          content="Chamindu Gayanuka, Software Engineer, Developer, UI/UX Designer, Portfolio, Telegram Bots, React Native, Python, Automation, GitHub, Sri Lanka"/>
+    <meta name="author" content="Chamindu Gayanuka"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="https://chamindu-gayanuka.github.io/"/>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Chamindu Gayanuka — Software Engineer · Developer · UI/UX Designer"/>
     <meta property="og:description"
-        content="Explore projects by Chamindu Gayanuka - Developer, Designer, and Problem Solver.">
-    <meta property="og:image" content="https://chamindu-gayanuka.github.io/assets/profile-pic.png">
-    <meta property="og:url" content="https://chamindu-gayanuka.github.io/">
-    <meta property="og:type" content="website">
-    <title>Chamindu Gayanuka | Software Engineer | Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+          content="Explore projects by Chamindu Gayanuka — a developer and designer building high-quality mobile apps, Python tools, and Telegram automation."/>
+    <meta property="og:image" content="https://chamindu-gayanuka.github.io/assets/profile/profile-pic.png"/>
+    <meta property="og:url" content="https://chamindu-gayanuka.github.io/"/>
+    <meta property="og:site_name" content="Chamindu Gayanuka Portfolio"/>
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Chamindu Gayanuka — Software Engineer · Developer · UI/UX Designer"/>
+    <meta name="twitter:description"
+          content="Developer & designer building high-quality mobile apps, Python tools and Telegram automation."/>
+    <meta name="twitter:image" content="https://chamindu-gayanuka.github.io/assets/profile/profile-pic.png"/>
+
+    <!-- Favicons -->
+    <link rel="icon" href="assets/favicons/favicon.ico" sizes="any"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png"/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+          rel="stylesheet"/>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- Styles (responsive.css last to win the cascade) -->
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/home.css"/>
+    <link rel="stylesheet" href="css/about.css"/>
+    <link rel="stylesheet" href="css/skills.css"/>
+    <link rel="stylesheet" href="css/projects.css"/>
+    <link rel="stylesheet" href="css/experience.css"/>
+    <link rel="stylesheet" href="css/gallery.css"/>
+    <link rel="stylesheet" href="css/contact.css"/>
+    <link rel="stylesheet" href="css/responsive.css"/>
+
+    <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="icon" href="/favicon.ico" sizes="any" type="image/x-icon">
-    <link rel="icon" type="image/png" href="/favicon.png">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicons/site.webmanifest">
-
+    <!-- JSON-LD -->
     <script type="application/ld+json">
         {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Chamindu Gayanuka",
-        "url": "https://chamindu-gayanuka.github.io/",
-        "image": "https://chamindu-gayanuka.github.io/assets/profile-pic.png",
-        "jobTitle": "Software Engineer",
-        "sameAs": [
-            "https://github.com/Chamindu-Gayanuka",
-            "https://www.linkedin.com/in/chamindu-gayanuka-244585270/",
-            "https://t.me/GwitcherG"
-        ]
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Chamindu Gayanuka",
+            "url": "https://chamindu-gayanuka.github.io/",
+            "image": "https://chamindu-gayanuka.github.io/assets/profile/profile-pic.png",
+            "jobTitle": "Software Engineer",
+            "description": "Software Engineer, Developer and UI/UX Designer specializing in mobile apps, Python automation and Telegram bots.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ampara",
+                "addressCountry": "Sri Lanka"
+            },
+            "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "The Open University of Sri Lanka"
+            },
+            "knowsAbout": [
+                "Software Engineering",
+                "UI/UX Design",
+                "React Native",
+                "Python",
+                "Telegram Bots",
+                "Automation"
+            ],
+            "sameAs": [
+                "https://github.com/Chamindu-Gayanuka",
+                "https://www.linkedin.com/in/chamindu-gayanuka-244585270/",
+                "https://t.me/GwitcherG"
+            ]
         }
     </script>
-
 </head>
 
 <body>
+<a href="#home" class="skip-link">Skip to content</a>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            <a href="https://chamindu-gayanuka.github.io/">⌁Chamindu Gayanuka⌁</a>
-        </div>
-        <div class="menu-icon" id="menu-icon">&#9776;</div>
+<!-- ============================ NAVBAR ============================ -->
+<header class="navbar" id="navbar">
+    <nav class="nav-inner" aria-label="Primary navigation">
+        <a href="#home" class="nav-logo" aria-label="Chamindu Gayanuka — Home">
+            <span class="logo-mark">CG</span>
+            <span class="logo-text">Chamindu&nbsp;Gayanuka</span>
+        </a>
+
         <ul class="nav-links" id="nav-links">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#project">Project</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Journey</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-    </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="home-section">
-        <div class="home-content">
-            <img src="assets/profile/profile-pic.png" alt="Chamindu Gayanuka Profile Picture" class="profile-img">
-            <h3>Hello! I Am <span class="highlight">Chamindu Gayanuka</span></h3>
-            <p class="tagline"><span class="cover-highlight">🚀 A Designer | Developer | Problem Solver</span></p>
-            <p class="subtext">I'm passionate about building efficient and scalable applications.</p>
-            <h1>I'm a <span class="typing"></span></h1>
-            <p class="desc">
-                Undergraduate Software Engineer at <span class="company">The Open University of Sri Lanka</span>.<br>
-                Dedicated to crafting innovative solutions and pushing technological boundaries.<br>
-                Let's build something extraordinary together!
-            </p>
+        <div class="nav-cta" id="nav-cta">
+            <a href="#contact" class="btn btn-primary btn-sm">Let's Talk</a>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section scroll-hidden">
-        <h2>About Me</h2>
-        <div class="about-container">
-            <div class="about-info">
-                <img src="assets/profile/profile-pic.png" alt="Chamindu Gayanuka Profile Picture">
-                <p>I'm a driven undergraduate software engineer at the <span class="highlight">Open University of Sri
-                        Lanka</span>.</p>
-                <ul class="personal-details">
-                    <li><strong>Birthday:</strong> 14 June 2002</li>
-                    <li><strong>Phone:</strong> +94 76 294 4551</li>
-                    <li><strong>City:</strong> Ampara</li>
-                    <li><strong>Age:</strong> 23</li>
-                    <li><strong>Degree:</strong> BSE</li>
-                </ul>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false"
+                aria-controls="nav-links">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+<div class="nav-backdrop" id="nav-backdrop"></div>
+
+<main id="content">
+
+    <!-- ============================ HERO ============================ -->
+    <section id="home" class="hero">
+        <span class="hero-glow g1"></span>
+        <span class="hero-glow g2"></span>
+
+        <div class="container hero-inner">
+            <div class="hero-copy">
+          <span class="hero-status reveal">
+            <span class="dot"></span> Available for freelance &amp; collaborations
+          </span>
+
+                <h1 class="hero-title reveal d1">
+                    <span class="line">Hi, I'm Chamindu</span>
+                    <span class="line gradient-text">Gayanuka</span>
+                </h1>
+
+                <p class="hero-roles reveal d1">
+                    <span>I'm a</span>
+                    <span class="typing" aria-live="polite"></span><span class="caret"></span>
+                </p>
+
+                <p class="hero-desc reveal d2">
+                    Undergraduate Software Engineer at <span class="company">The Open University of Sri Lanka</span>,
+                    crafting efficient, scalable applications and clean user experiences — from mobile apps to
+                    Python automation and Telegram bots. Let's build something extraordinary together.
+                </p>
+
+                <div class="hero-actions reveal d3">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fa-solid fa-layer-group"></i> View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-ghost">
+                        <i class="fa-solid fa-paper-plane"></i> Let's Talk
+                    </a>
+                </div>
+
+                <div class="hero-socials reveal d3">
+                    <span class="label">Connect</span>
+                    <a href="https://github.com/Chamindu-Gayanuka" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/chamindu-gayanuka-244585270/" target="_blank" rel="noopener"
+                       aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://t.me/GwitcherG" target="_blank" rel="noopener" aria-label="Telegram">
+                        <i class="fa-brands fa-telegram"></i></a>
+                </div>
+
+                <div class="hero-stats reveal d4">
+                    <div class="hero-stat">
+                        <div class="num">3+</div>
+                        <div class="lbl">Years Experience</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="num">8+</div>
+                        <div class="lbl">Projects Built</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="num">3</div>
+                        <div class="lbl">Core Disciplines</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="about-description">
-                <p class="about-text">
-                    Hi! I'm <span class="highlight">Chamindu Gayanuka</span>, a passionate software engineer, designer,
-                    and developer from Sri Lanka. <br> <br>
-                    I love crafting interactive applications that solve real-world problems while maintaining great user
-                    experiences. <br> <br>
-                    With over <span class="highlight">3 years of experience</span> in development and UI/UX design, I
-                    specialize in creating responsive, accessible, and efficient products. <br> <br>
-                    My interests include mobile development, automation, and building Telegram bots for fun and
-                    productivity. <br> <br>
-                    I'm currently open to freelance projects, collaborations, and learning new technologies to keep
-                    pushing my limits.
+            <div class="hero-visual reveal d2">
+                <div class="hero-portrait">
+                    <span class="hero-ring" aria-hidden="true"></span>
+                    <img src="assets/profile/profile-pic.png"
+                         alt="Portrait of Chamindu Gayanuka, Software Engineer and UI/UX Designer"/>
+                </div>
+
+                <div class="hero-codecard" aria-hidden="true">
+                    <div class="dots"><span></span><span></span><span></span></div>
+                    <div><span class="c-key">const</span> <span class="c-fn">dev</span> = {</div>
+                    <div>&nbsp;&nbsp;<span class="c-mut">name</span>: <span class="c-str">'Chamindu'</span>,</div>
+                    <div>&nbsp;&nbsp;<span class="c-mut">stack</span>: <span class="c-str">'JS · Python'</span>,</div>
+                    <div>&nbsp;&nbsp;<span class="c-mut">design</span>: <span class="c-str">true</span></div>
+                    <div>};</div>
+                </div>
+
+                <span class="hero-chip c1" aria-hidden="true"><i class="fa-solid fa-code"></i> Clean Code</span>
+                <span class="hero-chip c2" aria-hidden="true"><i class="fa-solid fa-pen-nib"></i> UI/UX</span>
+                <span class="hero-chip c3" aria-hidden="true"><i class="fa-brands fa-python"></i> Automation</span>
+            </div>
+        </div>
+
+        <a href="#about" class="hero-scroll" aria-label="Scroll to about section">
+            <span class="mouse"></span>
+            Scroll
+        </a>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============================ ABOUT ============================ -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow reveal">About Me</span>
+                <h2 class="section-title reveal d1">Designer &amp; developer with a <span class="gradient-text">builder's mindset</span>
+                </h2>
+                <p class="section-subtitle reveal d2">
+                    I turn ideas into functional, well-designed digital products.
                 </p>
             </div>
+
+            <div class="about-grid">
+                <aside class="about-card glass reveal">
+                    <div class="about-card-photo">
+                        <img src="assets/profile/profile-pic.png" alt="Chamindu Gayanuka"/>
+                    </div>
+                    <ul class="about-details">
+                        <li><span class="k"><i class="fa-solid fa-user"></i> Name</span><span class="v">Chamindu Gayanuka</span>
+                        </li>
+                        <li><span class="k"><i class="fa-solid fa-graduation-cap"></i> Degree</span><span class="v">BSE (Undergraduate)</span>
+                        </li>
+                        <li><span class="k"><i class="fa-solid fa-location-dot"></i> City</span><span class="v">Ampara, Sri Lanka</span>
+                        </li>
+                        <li><span class="k"><i class="fa-solid fa-cake-candles"></i> Birthday</span><span class="v">14 June 2002</span>
+                        </li>
+                        <li><span class="k"><i class="fa-solid fa-briefcase"></i> Freelance</span><span class="v">Available</span>
+                        </li>
+                    </ul>
+                </aside>
+
+                <div class="about-body">
+                    <p class="about-lead reveal d1">
+                        Hi! I'm <span class="gradient-text">Chamindu Gayanuka</span>, a passionate software engineer,
+                        designer and developer from Sri Lanka.
+                    </p>
+                    <div class="about-text reveal d2">
+                        <p>
+                            I love crafting interactive applications that solve real-world problems while maintaining
+                            great user experiences. With over <span class="highlight">3 years of experience</span> in
+                            development and UI/UX design, I specialize in creating responsive, accessible and
+                            efficient products.
+                        </p>
+                        <p>
+                            My interests include mobile development, automation and building Telegram bots for fun and
+                            productivity. I'm currently open to freelance projects, collaborations and learning new
+                            technologies to keep pushing my limits.
+                        </p>
+                    </div>
+
+                    <div class="about-blocks">
+                        <div class="about-block reveal d1">
+                            <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <h4>Education</h4>
+                            <p>Undergraduate Software Engineer at The Open University of Sri Lanka.</p>
+                        </div>
+                        <div class="about-block reveal d2">
+                            <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
+                            <h4>Philosophy</h4>
+                            <p>Build responsive, accessible and efficient products with great user experiences.</p>
+                        </div>
+                        <div class="about-block reveal d3">
+                            <div class="icon"><i class="fa-solid fa-rocket"></i></div>
+                            <h4>Goals</h4>
+                            <p>Keep learning new technologies and pushing my limits on real-world challenges.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-interests reveal d2">
+                        <h4>Interests</h4>
+                        <div class="chip-row">
+                            <span class="chip"><i class="fa-solid fa-mobile-screen"></i> Mobile Development</span>
+                            <span class="chip"><i class="fa-solid fa-robot"></i> Automation</span>
+                            <span class="chip"><i class="fa-brands fa-telegram"></i> Telegram Bots</span>
+                            <span class="chip"><i class="fa-solid fa-pen-nib"></i> UI/UX Design</span>
+                            <span class="chip"><i class="fa-solid fa-code"></i> Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Project Section -->
-    <section id="project" class="project-section scroll-hidden">
-        <h2>My Projects</h2>
-
-        <div class="project-container">
-            <div class="project-card">
-                <h3>Simple Calculator (React Native)</h3>
-                <p>A clean and minimal calculator built with React Native. Supports addition, subtraction,
-                    multiplication, and division on Android & iOS.</p>
-                <a href="https://github.com/Chamindu-Gayanuka/Simple-Calculator" target="_blank">View on GitHub</a>
+    <!-- ============================ SKILLS ============================ -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow reveal">Skills &amp; Tools</span>
+                <h2 class="section-title reveal d1">A stack for <span
+                        class="gradient-text">building &amp; designing</span></h2>
+                <p class="section-subtitle reveal d2">Technologies I use across the products I build.</p>
             </div>
 
-            <div class="project-card">
-                <h3>Telethon String Session Generator</h3>
-                <p>A secure Python script to generate Telegram String Sessions using the Telethon Library.</p>
-                <a href="https://github.com/Chamindu-Gayanuka/Telethon-String-Session-Generator" target="_blank">View on
-                    GitHub</a>
-            </div>
+            <div class="skills-groups">
+                <div class="skill-group reveal">
+                    <div class="skill-group-head">
+                        <span class="icon"><i class="fa-solid fa-code"></i></span>
+                        <div><h3>Languages</h3><span>Core programming</span></div>
+                    </div>
+                    <div class="skill-list">
+                        <span class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+                        <span class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                    </div>
+                </div>
 
-            <div class="project-card">
-                <h3>Pyrogram String Session Generator</h3>
-                <p>A simple Python script to generate Telegram String Sessions using the Pyrogram Library securely.</p>
-                <a href="https://github.com/Chamindu-Gayanuka/Pyrogram-String-Session-Generator" target="_blank">View on
-                    GitHub</a>
-            </div>
+                <div class="skill-group reveal d1">
+                    <div class="skill-group-head">
+                        <span class="icon"><i class="fa-solid fa-pen-ruler"></i></span>
+                        <div><h3>Frontend &amp; Mobile</h3><span>Interfaces &amp; apps</span></div>
+                    </div>
+                    <div class="skill-list">
+                        <span class="skill-tag"><i class="fa-brands fa-react"></i> React Native</span>
+                        <span class="skill-tag"><i class="fa-solid fa-mobile-screen"></i> Mobile UI</span>
+                        <span class="skill-tag"><i class="fa-brands fa-html5"></i> Responsive Web</span>
+                        <span class="skill-tag"><i class="fa-solid fa-wind"></i> CSS Animations</span>
+                    </div>
+                </div>
 
-            <div class="project-card">
-                <h3>Digital Rename Bot</h3>
-                <p>A Telegram bot that renames files with custom names while preserving metadata. Supports multiple
-                    formats.</p>
-                <a href="https://github.com/Chamindu-Gayanuka/Digital-Rename-Bot" target="_blank">View on GitHub</a>
-            </div>
+                <div class="skill-group reveal d2">
+                    <div class="skill-group-head">
+                        <span class="icon"><i class="fa-solid fa-server"></i></span>
+                        <div><h3>Backend &amp; Bots</h3><span>Logic &amp; automation</span></div>
+                    </div>
+                    <div class="skill-list">
+                        <span class="skill-tag"><i class="fa-brands fa-python"></i> Python Scripting</span>
+                        <span class="skill-tag"><i class="fa-brands fa-telegram"></i> Telethon</span>
+                        <span class="skill-tag"><i class="fa-brands fa-telegram"></i> Pyrogram</span>
+                        <span class="skill-tag"><i class="fa-solid fa-robot"></i> Telegram Bots</span>
+                        <span class="skill-tag"><i class="fa-solid fa-gears"></i> Automation</span>
+                    </div>
+                </div>
 
-            <div class="project-card">
-                <h3>Screenshot Bot</h3>
-                <p>A powerful Telegram bot that extracts evenly spaced screenshots from videos.</p>
-                <a href="https://github.com/Chamindu-Gayanuka/Screenshot-Bot" target="_blank">View on GitHub</a>
-            </div>
+                <div class="skill-group reveal d1">
+                    <div class="skill-group-head">
+                        <span class="icon"><i class="fa-solid fa-database"></i></span>
+                        <div><h3>Design</h3><span>UI/UX craft</span></div>
+                    </div>
+                    <div class="skill-list">
+                        <span class="skill-tag"><i class="fa-solid fa-pen-nib"></i> UI/UX Design</span>
+                        <span class="skill-tag"><i class="fa-solid fa-object-group"></i> Wireframing</span>
+                        <span class="skill-tag"><i class="fa-solid fa-universal-access"></i> Accessibility</span>
+                        <span class="skill-tag"><i class="fa-solid fa-swatchbook"></i> Prototyping</span>
+                    </div>
+                </div>
 
-            <div class="project-card">
-                <h3>PPTX-Password Remover Automate</h3>
-                <p>A simple Python GUI for unlocking PowerPoint files by modifying and removing passwords.</p>
-                <a href="https://github.com/Chamindu-Gayanuka/PPTX-Password-Remover-Automate" target="_blank">View on GitHub</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Subtitle Translator</h3>
-                <p>This is python custom tkinter based subtitles translator.</p>
-                <a href="https://github.com/Chamindu-Gayanuka/Subtitle-Translator" target="_blank">View on GitHub</a>
-            </div>
-
-            <div class="project-card">
-                <h3>UMZ Filter Bot (Ongoing)</h3>
-                <p>A Telegram auto filter bot with ultimate features 🚀. Currently in development.</p>
-                <a href="https://github.com/Chamindu-Gayanuka/UMZ-Filter-Bot" target="_blank">View on GitHub</a>
+                <div class="skill-group reveal d2">
+                    <div class="skill-group-head">
+                        <span class="icon"><i class="fa-solid fa-toolbox"></i></span>
+                        <div><h3>Tools</h3><span>Workflow</span></div>
+                    </div>
+                    <div class="skill-list">
+                        <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git</span>
+                        <span class="skill-tag"><i class="fa-brands fa-github"></i> GitHub</span>
+                        <span class="skill-tag"><i class="fa-solid fa-desktop"></i> CustomTkinter</span>
+                        <span class="skill-tag"><i class="fa-solid fa-film"></i> FFmpeg</span>
+                        <span class="skill-tag"><i class="fa-solid fa-terminal"></i> CLI</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section scroll-hidden">
-        <h2>Contact Me</h2>
-        <p class="contact-text">
-            I'm always open to collaborations, freelance projects, or just a friendly chat.<br>
-            Drop me a message and I'll get back to you as soon as possible!
-        </p>
+    <!-- ============================ PROJECTS ============================ -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow reveal">Featured Work</span>
+                <h2 class="section-title reveal d1">Projects that <span class="gradient-text">ship &amp; solve</span>
+                </h2>
+                <p class="section-subtitle reveal d2">
+                    A selection of apps, tools and bots I've designed and built. Explore the case studies.
+                </p>
+            </div>
 
-        <form class="contact-form">
-            <input type="text" name="name" id="name" placeholder="Your Name" required />
-            <input type="email" name="email" id="email" placeholder="Your Email" required />
-            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btnSubmit">Send Message</button>
-        </form>
+            <div class="project-filters reveal d2" id="project-filters" role="group" aria-label="Filter projects">
+                <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter-btn" data-filter="mobile" aria-pressed="false">Web / Mobile</button>
+                <button class="filter-btn" data-filter="python" aria-pressed="false">Python</button>
+                <button class="filter-btn" data-filter="automation" aria-pressed="false">Automation</button>
+                <button class="filter-btn" data-filter="telegram" aria-pressed="false">Telegram</button>
+                <button class="filter-btn" data-filter="tools" aria-pressed="false">Tools</button>
+            </div>
 
-        <p id="form-status"></p>
-
-        <!-- Contact Links with Real App Icons -->
-        <div class="contact-links-icons">
-            <a href="mailto:chamindugayanuka2002@gmail.com" target="_blank" class="contact-link email">
-                <i class="fa-solid fa-envelope"></i></a>
-            <a href="https://wa.me/94762944551" target="_blank" class="contact-link whatsapp">
-                <i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/in/chamindu-gayanuka-244585270/" target="_blank"
-                class="contact-link linkedin">
-                <i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/Chamindu-Gayanuka" target="_blank" class="contact-link github">
-                <i class="fa-brands fa-github"></i></a>
-            <a href="https://t.me/GwitcherG" target="_blank" class="contact-link telegram">
-                <i class="fa-brands fa-telegram"></i></a>
+            <div class="project-grid" id="project-grid"><!-- rendered by projects.js --></div>
+            <p class="projects-empty" id="projects-empty">No projects in this category yet.</p>
         </div>
     </section>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollTopBtn" title="Go to top">
-        <i class="fa-solid fa-arrow-up"></i>
+    <!-- ============================ EXPERIENCE / JOURNEY ============================ -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow reveal">My Journey</span>
+                <h2 class="section-title reveal d1">A timeline of <span
+                        class="gradient-text">growth &amp; building</span></h2>
+                <p class="section-subtitle reveal d2">The milestones shaping how I build and design today.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="tl-item current reveal">
+                    <span class="tl-dot"></span>
+                    <div class="tl-card">
+                        <span class="tl-date"><i class="fa-solid fa-graduation-cap"></i> Present <span class="tl-badge">Ongoing</span></span>
+                        <h3>Undergraduate Software Engineer</h3>
+                        <div class="tl-org">The Open University of Sri Lanka</div>
+                        <p>Pursuing a degree in Software Engineering while building real-world applications, sharpening
+                            my
+                            development and UI/UX design skills.</p>
+                        <div class="tl-tags"><span>Software Engineering</span><span>UI/UX</span><span>Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tl-item reveal d1">
+                    <span class="tl-dot"></span>
+                    <div class="tl-card">
+                        <span class="tl-date"><i class="fa-solid fa-robot"></i> Ongoing Focus</span>
+                        <h3>Automation &amp; Telegram Bot Development</h3>
+                        <div class="tl-org">Independent Projects</div>
+                        <p>Building Telegram bots and Python automation tools — from file renaming and screenshot
+                            extraction to auto-filter bots — for fun and productivity.</p>
+                        <div class="tl-tags">
+                            <span>Python</span><span>Telethon</span><span>Pyrogram</span><span>Bots</span></div>
+                    </div>
+                </div>
+
+                <div class="tl-item reveal d2">
+                    <span class="tl-dot"></span>
+                    <div class="tl-card">
+                        <span class="tl-date"><i class="fa-solid fa-mobile-screen"></i> 3+ Years</span>
+                        <h3>Development &amp; UI/UX Design</h3>
+                        <div class="tl-org">Self-driven &amp; Freelance</div>
+                        <p>Over three years crafting responsive, accessible products across mobile and desktop —
+                            combining engineering with a designer's eye for user experience.</p>
+                        <div class="tl-tags"><span>React Native</span><span>UI/UX</span><span>Responsive</span></div>
+                    </div>
+                </div>
+
+                <div class="tl-item reveal d3">
+                    <span class="tl-dot"></span>
+                    <div class="tl-card">
+                        <span class="tl-date"><i class="fa-solid fa-seedling"></i> The Beginning</span>
+                        <h3>Started My Developer Journey</h3>
+                        <div class="tl-org">Sri Lanka</div>
+                        <p>Fell in love with building software and solving real-world problems through code — the spark
+                            behind everything I create today.</p>
+                        <div class="tl-tags"><span>Curiosity</span><span>Problem Solving</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ GALLERY ============================ -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow reveal">Visual Showcase</span>
+                <h2 class="section-title reveal d1">A <span class="gradient-text">designer's gallery</span></h2>
+                <p class="section-subtitle reveal d2">
+                    Project visuals, UI/UX explorations and development concepts. Click any tile to view fullscreen.
+                </p>
+            </div>
+
+            <div class="gallery-filters reveal d2" id="gallery-filters" role="group" aria-label="Filter gallery">
+                <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter-btn" data-filter="screenshots" aria-pressed="false">Screenshots</button>
+                <button class="filter-btn" data-filter="uiux" aria-pressed="false">UI/UX</button>
+                <button class="filter-btn" data-filter="dev" aria-pressed="false">Development</button>
+                <button class="filter-btn" data-filter="certificates" aria-pressed="false">Certificates</button>
+                <button class="filter-btn" data-filter="events" aria-pressed="false">Events</button>
+            </div>
+
+            <div class="gallery-masonry" id="gallery-masonry"><!-- rendered by gallery.js --></div>
+        </div>
+    </section>
+
+    <!-- ============================ CONTACT ============================ -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow reveal">Get In Touch</span>
+                <h2 class="section-title reveal d1">Have an idea? <span class="gradient-text">Let's build something great.</span>
+                </h2>
+                <p class="section-subtitle reveal d2">
+                    I'm always open to collaborations, freelance projects, or just a friendly chat.
+                </p>
+            </div>
+
+            <div class="contact-wrap">
+                <div class="contact-cta glass reveal">
+                    <h2>Let's create your next digital product.</h2>
+                    <p>Drop me a message and I'll get back to you as soon as possible.</p>
+
+                    <div class="contact-methods">
+                        <a class="contact-method" href="mailto:chamindugayanuka2002@gmail.com">
+                            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                            <span><span class="m-label">Email</span><br><span class="m-value">chamindugayanuka2002@gmail.com</span></span>
+                        </a>
+                        <a class="contact-method" href="https://wa.me/94762944551" target="_blank" rel="noopener">
+                            <span class="icon"><i class="fa-brands fa-whatsapp"></i></span>
+                            <span><span class="m-label">Phone / WhatsApp</span><br><span
+                                    class="m-value">+94 76 294 4551</span></span>
+                        </a>
+                        <div class="contact-method">
+                            <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <span><span class="m-label">Location</span><br><span
+                                    class="m-value">Ampara, Sri Lanka</span></span>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a class="email" href="mailto:chamindugayanuka2002@gmail.com" aria-label="Email"><i
+                                class="fa-solid fa-envelope"></i></a>
+                        <a class="whatsapp" href="https://wa.me/94762944551" target="_blank" rel="noopener"
+                           aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a class="linkedin" href="https://www.linkedin.com/in/chamindu-gayanuka-244585270/"
+                           target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a class="github" href="https://github.com/Chamindu-Gayanuka" target="_blank" rel="noopener"
+                           aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a class="telegram" href="https://t.me/GwitcherG" target="_blank" rel="noopener"
+                           aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-panel glass reveal d1">
+                    <h3>Send a message</h3>
+                    <p class="sub">Fill in the form and I'll reply to your email.</p>
+                    <form class="contact-form" novalidate>
+                        <div class="field">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name" placeholder="Jane Doe" required/>
+                        </div>
+                        <div class="field">
+                            <label for="email">Your Email</label>
+                            <input type="email" name="email" id="email" placeholder="jane@example.com" required/>
+                        </div>
+                        <div class="field">
+                            <label for="message">Your Message</label>
+                            <textarea name="message" id="message" rows="5" placeholder="Tell me about your idea..."
+                                      required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btnSubmit">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                        <p id="form-status" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#home" class="nav-logo">
+                    <span class="logo-mark">CG</span>
+                    <span class="logo-text">Chamindu&nbsp;Gayanuka</span>
+                </a>
+                <p>Software Engineer, Developer &amp; UI/UX Designer building high-quality digital products from Sri
+                    Lanka.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <a href="#experience">Journey</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <a href="https://github.com/Chamindu-Gayanuka" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/chamindu-gayanuka-244585270/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://t.me/GwitcherG" target="_blank" rel="noopener">Telegram</a>
+                </div>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="footer-year">2025</span>
+                <a href="https://github.com/Chamindu-Gayanuka" target="_blank" rel="noopener" class="footer-name">Chamindu
+                    Gayanuka</a>. All Rights Reserved.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/Chamindu-Gayanuka" target="_blank" rel="noopener" aria-label="GitHub"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/chamindu-gayanuka-244585270/" target="_blank" rel="noopener"
+                   aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://t.me/GwitcherG" target="_blank" rel="noopener" aria-label="Telegram"><i
+                        class="fa-brands fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll-to-top -->
+<button id="scrollTopBtn" title="Go to top" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- ============================ PROJECT MODAL ============================ -->
+<div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-overlay" data-close-modal></div>
+    <div class="modal-dialog">
+        <button class="modal-close" data-close-modal aria-label="Close case study"><i class="fa-solid fa-xmark"></i>
+        </button>
+        <div id="modal-body"><!-- rendered by projects.js --></div>
+    </div>
+</div>
+
+<!-- ============================ LIGHTBOX ============================ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox" aria-hidden="true">
+    <button class="lb-btn lb-close" data-lb-close aria-label="Close lightbox"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lb-btn lb-fullscreen" data-lb-fullscreen aria-label="Toggle fullscreen"><i
+            class="fa-solid fa-expand"></i></button>
+    <button class="lb-btn lb-prev" data-lb-prev aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i>
     </button>
+    <button class="lb-btn lb-next" data-lb-next aria-label="Next image"><i class="fa-solid fa-chevron-right"></i>
+    </button>
+    <figure class="lightbox-figure" id="lightbox-figure">
+        <img id="lightbox-img" src="" alt=""/>
+        <figcaption class="lightbox-caption">
+            <div class="lc-cat" id="lightbox-cat"></div>
+            <div class="lc-title" id="lightbox-title"></div>
+            <div class="lightbox-counter" id="lightbox-counter"></div>
+        </figcaption>
+    </figure>
+</div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© 2025 <a href="https://github.com/Chamindu-Gayanuka" target="_blank" class="footer-name">Chamindu
-                Gayanuka</a>. All Rights Reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-
+<!-- Scripts -->
+<script src="js/animations.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>

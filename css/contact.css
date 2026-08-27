@@ -1,0 +1,225 @@
+/* ==========================================================================
+   contact.css — Contact CTA + form
+   ========================================================================== */
+
+.contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(28px, 5vw, 56px);
+    align-items: stretch;
+}
+
+/* Left: CTA panel */
+.contact-cta {
+    padding: clamp(28px, 4vw, 44px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-cta::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(139, 92, 246, 0.22);
+    filter: blur(80px);
+    top: -80px;
+    right: -60px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.contact-cta h2 {
+    font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+}
+
+.contact-cta p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+.contact-methods {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--text);
+    transition: transform 0.3s var(--ease);
+}
+
+.contact-method:hover {
+    transform: translateX(4px);
+}
+
+.contact-method .icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: var(--grad-soft);
+    border: 1px solid var(--border);
+    color: var(--accent);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.contact-method .m-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+}
+
+.contact-method .m-value {
+    font-size: 0.98rem;
+    font-weight: 600;
+}
+
+.contact-socials {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.contact-socials a {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 1.15rem;
+    transition: all 0.3s var(--ease);
+}
+
+.contact-socials a:hover {
+    color: #fff;
+    transform: translateY(-4px);
+}
+
+.contact-socials a.email:hover {
+    background: #ef5350;
+    border-color: #ef5350;
+}
+
+.contact-socials a.whatsapp:hover {
+    background: #25D366;
+    border-color: #25D366;
+}
+
+.contact-socials a.linkedin:hover {
+    background: #0A66C2;
+    border-color: #0A66C2;
+}
+
+.contact-socials a.github:hover {
+    background: #6e5494;
+    border-color: #6e5494;
+}
+
+.contact-socials a.telegram:hover {
+    background: #229ED9;
+    border-color: #229ED9;
+}
+
+/* Right: form */
+.contact-form-panel {
+    padding: clamp(26px, 4vw, 40px);
+}
+
+.contact-form-panel h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.contact-form-panel .sub {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 26px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.field {
+    position: relative;
+}
+
+.field label {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: var(--r-sm);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 0.96rem;
+    font-family: var(--font);
+    transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease),
+    background 0.3s var(--ease);
+    resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: var(--muted-2);
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0 4px rgba(192, 132, 252, 0.12);
+}
+
+.contact-form .btn {
+    width: 100%;
+    margin-top: 4px;
+}
+
+.contact-form .btn.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+#form-status {
+    font-size: 0.92rem;
+    min-height: 1.2em;
+    padding: 4px 2px;
+    transition: color 0.3s var(--ease);
+}
+
+#form-status.success {
+    color: #6ee7b7;
+}
+
+#form-status.error {
+    color: #fca5a5;
+}
