@@ -98,22 +98,29 @@
     font-weight: 600;
     color: var(--text);
     margin: 6px 0 22px;
-    min-height: 1.5em;
-    display: flex;
+    min-height: 1.7em;
+    display: inline-flex;
     align-items: center;
     gap: 4px;
+    line-height: 1.2;
+    white-space: nowrap;
+    vertical-align: middle;
 }
 
 .hero-roles .typing {
+    display: inline-block;
     background: var(--grad-text);
     -webkit-background-clip: text;
     background-clip: text;
     padding: 2px 6px;
     -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
 .hero-roles .caret {
     display: inline-block;
+    flex-shrink: 0;
     width: 3px;
     height: 1.15em;
     background: var(--accent);
