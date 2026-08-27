@@ -1,21 +1,114 @@
 /* ==========================================================================
    gallery.js — Masonry gallery rendering, filters, lightbox
-   Real generated visuals + clearly-marked placeholders for certificates/events.
+   Real achievements, certificates and event visuals + design/dev showcase.
    ========================================================================== */
 
 const GALLERY_ITEMS = [
+    /* ------------------------- Achievements ------------------------- */
     {
-        src: "assets/gallery/uiux-dashboard.png",
-        category: "uiux",
-        categoryLabel: "UI/UX Design",
-        title: "Dark Analytics Dashboard Concept",
+        src: "assets/certificates/achievement-codesignal-cs-fundamentals.png",
+        category: "achievements",
+        categoryLabel: "Achievement",
+        title: "CodeSignal — Computer Science Fundamentals",
     },
     {
-        src: "assets/gallery/uiux-mobile.png",
+        src: "assets/certificates/achievement-devtown-community.jpg",
+        category: "achievements",
+        categoryLabel: "Achievement",
+        title: "DevTown — Certificate of Appreciation (Community)",
+    },
+
+    /* ------------------------- Certificates ------------------------- */
+    {
+        src: "assets/certificates/certificate-frontend-aws.jpg",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Front-End Web Development (React & JavaScript) — AWS Community Builders",
+    },
+    {
+        src: "assets/certificates/certificate-frontend-gdsc.jpg",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Front-End Web Development (React & JavaScript) — Google Developer Student Clubs",
+    },
+    {
+        src: "assets/certificates/certificate-frontend-microsoft.jpg",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Front-End Web Development (React & JavaScript) — Microsoft Learn Student Ambassadors",
+    },
+    {
+        src: "assets/certificates/certificate-frontend-devtown.jpg",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Front-End Web Development (React & JavaScript) — DevTown Bootcamp",
+    },
+    {
+        src: "assets/certificates/certificate-backend-aws.jpg",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Back-End Web Development (Node.js & Express) — AWS Community Builders",
+    },
+    {
+        src: "assets/certificates/certificate-backend-gdsc.jpg",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Back-End Web Development (Node.js & Express) — Google Developer Student Clubs",
+    },
+    {
+        src: "assets/certificates/certificate-backend-microsoft.jpg",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Back-End Web Development (Node.js & Express) — Microsoft Learn Student Ambassadors",
+    },
+    {
+        src: "assets/certificates/certificate-backend-devtown.jpg",
+        category: "certificates",
+        categoryLabel: "Certificate",
+        title: "Back-End Web Development (Node.js & Express) — DevTown Bootcamp",
+    },
+
+    /* ------------------------- Events ------------------------- */
+    {
+        src: "assets/gallery/event-jira-workshop.jpg",
+        category: "events",
+        categoryLabel: "Event",
+        title: "Jira Workshop",
+    },
+
+    /* ------------------------- UI/UX Design ------------------------- */
+    {
+        src: "assets/projects/uiux-eduway.png",
         category: "uiux",
         categoryLabel: "UI/UX Design",
-        title: "Mobile App UI Exploration",
+        title: "EduWay — English Learning Platform",
     },
+    {
+        src: "assets/projects/uiux-edumate.png",
+        category: "uiux",
+        categoryLabel: "UI/UX Design",
+        title: "EduMate — Student Management System",
+    },
+    {
+        src: "assets/projects/uiux-busbuddy.png",
+        category: "uiux",
+        categoryLabel: "UI/UX Design",
+        title: "BusBuddy — Real-Time Bus Tracking",
+    },
+    {
+        src: "assets/projects/uiux-carepill.png",
+        category: "uiux",
+        categoryLabel: "UI/UX Design",
+        title: "CarePill — Caregiving & Medication Reminder",
+    },
+    {
+        src: "assets/projects/uiux-adalanka.png",
+        category: "uiux",
+        categoryLabel: "UI/UX Design",
+        title: "AdaLanka — News Platform",
+    },
+
+    /* ------------------------- Project Screenshots ------------------------- */
     {
         src: "assets/projects/calculator.png",
         category: "screenshots",
@@ -29,16 +122,24 @@ const GALLERY_ITEMS = [
         title: "Subtitle Translator — Cover",
     },
     {
-        src: "assets/projects/umz-filter-bot.png",
+        src: "assets/projects/ape-kade-credit-book.png",
         category: "screenshots",
         categoryLabel: "Project Screenshot",
-        title: "UMZ Filter Bot — Cover",
+        title: "Ape Kade Credit Book — Cover",
+    },
+
+    /* ------------------------- Development ------------------------- */
+    {
+        src: "assets/projects/fifo-page-replacement.png",
+        category: "dev",
+        categoryLabel: "Development",
+        title: "FIFO Page Replacement Simulator — Concept Art",
     },
     {
         src: "assets/projects/screenshot-bot.png",
         category: "dev",
         categoryLabel: "Development",
-        title: "Screenshot Bot — Concept Art",
+        title: "Telegram Screenshot Bot — Concept Art",
     },
     {
         src: "assets/projects/pptx-remover.png",
@@ -47,32 +148,10 @@ const GALLERY_ITEMS = [
         title: "PPTX Remover — Concept Art",
     },
     {
-        src: "assets/projects/telethon.png",
+        src: "assets/projects/ousl-credit-calculator.png",
         category: "dev",
         categoryLabel: "Development",
-        title: "Session Generator — Concept Art",
-    },
-];
-
-// Placeholder tiles (no real files yet) — user will replace with real assets.
-const GALLERY_PLACEHOLDERS = [
-    {
-        category: "certificates",
-        icon: "fa-award",
-        title: "Certificate",
-        note: "Add your certificates to assets/certificates/",
-    },
-    {
-        category: "certificates",
-        icon: "fa-certificate",
-        title: "Achievement",
-        note: "Drop an image into the gallery data to display it here",
-    },
-    {
-        category: "events",
-        icon: "fa-calendar-star",
-        title: "Event Photo",
-        note: "Add event photos to assets/gallery/",
+        title: "OUSL BSE Credit Calculator — Concept Art",
     },
 ];
 
@@ -94,20 +173,7 @@ const GALLERY_PLACEHOLDERS = [
       </figure>`;
     }
 
-    function placeholderHTML(ph) {
-        return `
-      <div class="gallery-item placeholder reveal" data-category="${ph.category}">
-        <div class="gallery-ph">
-          <i class="fa-solid ${ph.icon}"></i>
-          <span class="ph-title">${ph.title}</span>
-          <span class="ph-note">${ph.note}</span>
-        </div>
-      </div>`;
-    }
-
-    masonry.innerHTML =
-        GALLERY_ITEMS.map(itemHTML).join("") +
-        GALLERY_PLACEHOLDERS.map(placeholderHTML).join("");
+    masonry.innerHTML = GALLERY_ITEMS.map(itemHTML).join("");
 
     /* ---------- Filters ---------- */
     const filterBar = document.getElementById("gallery-filters");
@@ -173,14 +239,13 @@ const GALLERY_PLACEHOLDERS = [
         if (lastFocused) lastFocused.focus();
     }
 
-    // Open only real (non-placeholder) items; map DOM index to GALLERY_ITEMS index
     masonry.addEventListener("click", (e) => {
-        const fig = e.target.closest(".gallery-item:not(.placeholder)");
+        const fig = e.target.closest(".gallery-item");
         if (!fig) return;
         openLightbox(parseInt(fig.getAttribute("data-index"), 10));
     });
     masonry.addEventListener("keydown", (e) => {
-        const fig = e.target.closest(".gallery-item:not(.placeholder)");
+        const fig = e.target.closest(".gallery-item");
         if (!fig) return;
         if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
